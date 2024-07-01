@@ -136,23 +136,32 @@ function support_ticket_output($vars) {
 
 ?>
 
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="insert-tab" data-toggle="tab" href="#insert" role="tab" aria-controls="insert" aria-selected="true">ثبت مقاله</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="article-tab" data-toggle="tab" href="#article" role="tab" aria-controls="article" aria-selected="false">مرور مقالات</a>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="insert-tab">
   
-test
-
+  <form action="/" method="post">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">نام مقاله</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="name" placeholder="نام مقاله را وارد نمایید">
   </div>
-  
-  <div class="tab-pane fade" id="article" role="tabpanel" aria-labelledby="article-tab">...</div>
+  <div class="form-group">
+    <label for="FormControlSelect1">دپارتمان</label>
+    <select class="form-control" id="FormControlSelect1" name="cat">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="isurl" value="1">
+  <label class="form-check-label" for="inlineCheckbox1">لینک بیرونی به مقاله</label>
 </div>
+  <div class="form-group">
+    <label for="FormControlTextarea1">محتوای/لینک مقاله</label>
+    <textarea class="form-control" id="FormControlTextarea1" rows="5"></textarea>
+  </div>
+</form>
+
 
 <?php	
   if(isset($_POST["name"]) && !empty($_POST["name"]) ){ 
