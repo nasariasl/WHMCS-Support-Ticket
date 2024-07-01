@@ -191,7 +191,7 @@ function support_ticket_output($vars) {
 
 function support_ticket_clientarea($vars) {
  
-  include 'clienthome.php';
+  //include 'clienthome.php';
     $modulelink = $vars['modulelink'];
     $version = $vars['version'];
     $option1 = $vars['option1'];
@@ -201,7 +201,7 @@ function support_ticket_clientarea($vars) {
     $option5 = $vars['option5'];
     $option6 = $vars['option6'];
     $LANG = $vars['_lang'];
- 
+		$foo = 'foo is feng';
 // create or open (if exists) the database
 //$database = new SQLite3('/home/devmaralhost/public_html/modules/addons/mrna_support_ticket_article/fullpath_myDatabase.sqlite');
 

@@ -1,3 +1,4 @@
+{$foo}
 <!-- Page Content -->
 <div class="container">
 
