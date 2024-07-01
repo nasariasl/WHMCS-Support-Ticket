@@ -1,4 +1,4 @@
-{$foo}
+{$testvar}
 <!-- Page Content -->
 <div class="container">
 

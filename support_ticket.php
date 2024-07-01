@@ -212,7 +212,7 @@ function support_ticket_clientarea($vars) {
         'requirelogin' => true, # accepts true/false
         'forcessl' => false, # accepts true/false
         'vars' => array(
-            'testvar' => 'demo',
+            'testvar' => 'demo is testvar',
             'anothervar' => 'value',
             'sample' => 'test',
         ),
