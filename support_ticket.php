@@ -57,7 +57,7 @@ function support_ticket_activate()
     try {
         Capsule::schema()
             ->create(
-                'mrna_mod_addonexample',
+                'mrna_support_ticket',
                 function ($table) {
                     /** @var \Illuminate\Database\Schema\Blueprint $table */
                     $table->increments('id');
@@ -76,7 +76,7 @@ function support_ticket_activate()
         return [
             // Supported values here include: success, error or info
             'status' => "error",
-            'description' => 'Unable to create mrna_mod_addonexample: ' . $e->getMessage(),
+            'description' => 'Unable to create mrna_support_ticket: ' . $e->getMessage(),
         ];
     }
 }
@@ -99,7 +99,7 @@ function support_ticket_deactivate()
     // Undo any database and schema modifications made by your module here
     try {
         Capsule::schema()
-            ->dropIfExists('mrna_mod_addonexample');
+            ->dropIfExists('mrna_support_ticket');
 
         return [
             // Supported values here include: success, error or info
@@ -111,7 +111,7 @@ function support_ticket_deactivate()
         return [
             // Supported values here include: success, error or info
             "status" => "error",
-            "description" => "Unable to drop mrna_mod_addonexample: {$e->getMessage()}",
+            "description" => "Unable to drop mrna_support_ticket: {$e->getMessage()}",
         ];
     }
 }
@@ -138,7 +138,7 @@ function support_ticket_output($vars) {
                 function ($connectionManager)
                 {
                     /** @var \Illuminate\Database\Connection $connectionManager */
-                    $connectionManager->table('mrna_mod_addonexample')->insert(
+                    $connectionManager->table('mrna_support_ticket')->insert(
                         [
                             'demo' => $_GET['demo']
                         ]
