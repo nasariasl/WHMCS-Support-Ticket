@@ -147,30 +147,7 @@ function support_ticket_output($vars) {
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="insert-tab">
   
-  <form action="/" method="post">
-  <div class="form-group">
-    <label for="exampleFormControlInput1">نام مقاله</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" name="name" placeholder="نام مقاله را وارد نمایید">
-  </div>
-  <div class="form-group">
-    <label for="FormControlSelect1">دپارتمان</label>
-    <select class="form-control" id="FormControlSelect1" name="cat">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="isurl" value="1">
-  <label class="form-check-label" for="inlineCheckbox1">لینک بیرونی به مقاله</label>
-</div>
-  <div class="form-group">
-    <label for="FormControlTextarea1">محتوای/لینک مقاله</label>
-    <textarea class="form-control" id="FormControlTextarea1" rows="5"></textarea>
-  </div>
-</form>
+test
 
   </div>
   
