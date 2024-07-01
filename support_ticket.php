@@ -57,7 +57,7 @@ function support_ticket_activate()
     try {
         Capsule::schema()
             ->create(
-                'mrna_support_ticket',
+                'mrna_support_ticket_article',
                 function ($table) {
                     /** @var \Illuminate\Database\Schema\Blueprint $table */
                     $table->increments('id');
@@ -76,7 +76,7 @@ function support_ticket_activate()
         return [
             // Supported values here include: success, error or info
             'status' => "error",
-            'description' => 'Unable to create mrna_support_ticket: ' . $e->getMessage(),
+            'description' => 'Unable to create mrna_support_ticket_article: ' . $e->getMessage(),
         ];
     }
 }
@@ -94,12 +94,12 @@ function support_ticket_activate()
  *
  * @return array Optional success/failure message
  */
-function support_ticket_deactivate()
+/* function support_ticket_deactivate()
 {
     // Undo any database and schema modifications made by your module here
     try {
         Capsule::schema()
-            ->dropIfExists('mrna_support_ticket');
+            ->dropIfExists('mrna_support_ticket_article');
 
         return [
             // Supported values here include: success, error or info
@@ -111,10 +111,10 @@ function support_ticket_deactivate()
         return [
             // Supported values here include: success, error or info
             "status" => "error",
-            "description" => "Unable to drop mrna_support_ticket: {$e->getMessage()}",
+            "description" => "Unable to drop mrna_support_ticket_article: {$e->getMessage()}",
         ];
     }
-}
+} */
 
 
 
@@ -138,7 +138,7 @@ function support_ticket_output($vars) {
                 function ($connectionManager)
                 {
                     /** @var \Illuminate\Database\Connection $connectionManager */
-                    $connectionManager->table('mrna_support_ticket')->insert(
+                    $connectionManager->table('mrna_support_ticket_article')->insert(
                         [
                             'demo' => $_GET['demo']
                         ]
@@ -166,7 +166,7 @@ function support_ticket_clientarea($vars) {
     $LANG = $vars['_lang'];
  
 // create or open (if exists) the database
-//$database = new SQLite3('/home/devmaralhost/public_html/modules/addons/mrna_support_ticket/fullpath_myDatabase.sqlite');
+//$database = new SQLite3('/home/devmaralhost/public_html/modules/addons/mrna_support_ticket_article/fullpath_myDatabase.sqlite');
 
     return array(
         'pagetitle' => 'ثبت تیکت پشتیبانی',
