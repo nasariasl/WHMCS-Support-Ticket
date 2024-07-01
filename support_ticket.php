@@ -174,7 +174,7 @@ function support_ticket_output($vars) {
                     /** @var \Illuminate\Database\Connection $connectionManager */
                     $connectionManager->table('mrna_support_ticket_article')->insert(
                         [
-                            'name' => $_POST['demo'],
+                            'name' => $_POST['name'],
                             'content' => $_POST['content'],
                             'cat' => $_POST['cat'],
                             'isurl' => $_POST['isurl']
