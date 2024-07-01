@@ -137,7 +137,7 @@ function support_ticket_output($vars) {
 ?>
 
   
-  <form action="/<?php echo $modulelink; ?>" method="post">
+  <form action="/admin/<?php echo $modulelink; ?>" method="post">
   <div class="form-group">
     <label for="exampleFormControlInput1">نام مقاله</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" name="name" placeholder="نام مقاله را وارد نمایید">
