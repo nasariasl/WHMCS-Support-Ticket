@@ -169,9 +169,9 @@ function support_ticket_output($vars) {
             );
         } catch (\Exception $e) {
             echo "Uh oh! Inserting didn't work, but I was able to rollback. {$e->getMessage()}";
-     }
+    }
 
-
+  }
 }
 
 function support_ticket_clientarea($vars) {
