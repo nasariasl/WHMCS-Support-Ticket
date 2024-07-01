@@ -160,6 +160,7 @@ function support_ticket_output($vars) {
     <label for="FormControlTextarea1">محتوای/لینک مقاله</label>
     <textarea class="form-control" id="FormControlTextarea1" rows="5"></textarea>
   </div>
+   <button type="submit" class="btn btn-primary">ثبت</button>
 </form>
 
 
