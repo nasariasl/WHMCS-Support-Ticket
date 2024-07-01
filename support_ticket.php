@@ -158,7 +158,7 @@ function support_ticket_output($vars) {
 </div>
   <div class="form-group">
     <label for="FormControlTextarea1">محتوای/لینک مقاله</label>
-    <textarea class="form-control" id="FormControlTextarea1" rows="5"></textarea>
+    <textarea class="form-control" id="FormControlTextarea1" name="content" rows="5"></textarea>
   </div>
    <button type="submit" class="btn btn-primary">ثبت</button>
 </form>
@@ -166,6 +166,7 @@ function support_ticket_output($vars) {
 
 <?php	
   if(isset($_POST["name"]) && !empty($_POST["name"]) ){ 
+  print_r($_POST);
 	try {
             Capsule::connection()->transaction(
                 function ($connectionManager)
